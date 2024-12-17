@@ -1,0 +1,17 @@
+blinker @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/blinker_1729040606648/work
+click @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/click_1729040674118/work
+colorama @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/colorama_1729036581634/work
+Flask @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/flask_1729043854102/work
+gunicorn==23.0.0
+itsdangerous @ file:///C:/Users/dev-admin/buildout/croot/itsdangerous_1732929022589/work
+Jinja2 @ file:///C:/b/abs_ddyeze2h6_/croot/jinja2_1730903330414/work
+joblib==1.4.2
+MarkupSafe @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/markupsafe_1729039103656/work
+numpy==2.2.0
+packaging==24.2
+scikit-learn==1.6.0
+scipy==1.14.1
+setuptools==75.1.0
+threadpoolctl==3.5.0
+Werkzeug @ file:///C:/Users/dev-admin/buildout/perseverance-python-buildout/croot/werkzeug_1731712504102/work
+wheel==0.44.0
