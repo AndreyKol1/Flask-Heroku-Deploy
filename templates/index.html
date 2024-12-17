@@ -23,7 +23,17 @@
             </select>
     
             <label for="dependents">Dependents:</label>
-            <input type="number" id="dependents" placeholder="1, 2 or 3" min="0" max="3" step="1" name="dependents">
+            <input 
+                type="number" 
+                id="dependents" 
+                placeholder="1, 2 or 3" 
+                min="0" 
+                max="3" 
+                step="1" 
+                name="dependents" 
+                inputmode="numeric"
+                oninput="restrictInput(event)"
+            />
     
             <label for="education">Education:</label>
             <select id="education" name="education">
@@ -38,19 +48,61 @@
             </select>
     
             <label for="applicant_income">Applicant Income:</label>
-            <input type="number" id="applicant_income" min="1" placeholder="in dollars" name="applicant_income">
+            <input 
+                type="number" 
+                id="applicant_income" 
+                min="1" 
+                placeholder="in dollars" 
+                name="applicant_income"
+                inputmode="numeric"
+                oninput="restrictInput(event)"
+            />
     
             <label for="coapplicant_income">Coapplicant Income:</label>
-            <input type="number" id="coapplicant_income" min="1" placeholder="in dollars" name="coapplicant_income">
+            <input 
+                type="number" 
+                id="coapplicant_income" 
+                min="1" 
+                placeholder="in dollars" 
+                name="coapplicant_income"
+                inputmode="numeric"
+                oninput="restrictInput(event)"
+            />
     
             <label for="loan_amount">Loan Amount:</label>
-            <input type="number" id="loan_amount" placeholder="in dollars" min="1" name="loan_amount">
+            <input 
+                type="number" 
+                id="loan_amount" 
+                placeholder="in dollars" 
+                min="1" 
+                name="loan_amount"
+                inputmode="numeric"
+                oninput="restrictInput(event)"
+            />
     
             <label for="loan_amount_term">Loan Amount Term:</label>
-            <input type="number" id="loan_amount_term" placeholder="days" min="1" name="loan_amount_term">
+            <input 
+                type="number" 
+                id="loan_amount_term" 
+                placeholder="days" 
+                min="1" 
+                name="loan_amount_term"
+                inputmode="numeric"
+                oninput="restrictInput(event)"
+            />
     
             <label for="credit_history">Credit History:</label>
-            <input type="number" id="credit_history" placeholder="0 or 1" min="0" max="1" step="1" name="credit_history">
+            <input 
+                type="number" 
+                id="credit_history" 
+                placeholder="0 or 1" 
+                min="0" 
+                max="1" 
+                step="1" 
+                name="credit_history"
+                inputmode="numeric"
+                oninput="restrictInput(event)"
+            />
     
             <label for="property_area">Property Area:</label>
             <select id="property_area" name="property_area">
@@ -62,10 +114,20 @@
             <button type="submit">Predict</button>
         </form>
     </div>
-    
+
     {% if prediction_text %}
         <h2>{{ prediction_text }}</h2>
     {% endif %}
-    
+
+    <script>
+        function restrictInput(event) {
+            const input = event.target;
+            const value = input.value;
+
+            if (value && !/^\d*$/.test(value)) {
+                input.value = value.replace(/[^0-9]/g, ''); 
+            }
+        }
+    </script>
 </body>
 </html>
